@@ -1,0 +1,2970 @@
+﻿/* =========================================================================
+   MALATYA SÃ–ZLÃœK MODERN - DESIGN SYSTEM & HEADER STYLES
+   ========================================================================= */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    --accent-orange: #f97316;
+    --wiki-blue: #0645ad;
+    --wiki-red: #dc2626;
+    --bg-gray: #f8fafc;
+    --border-color: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --header-bg: rgba(255, 255, 255, 0.92);
+    --card-shadow: 0 4px 25px -5px rgba(15, 23, 42, 0.08);
+    --floating-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    color: var(--text-main);
+    background-color: var(--bg-gray);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* TÄ°POGRAFÄ° */
+h1, h2, h3 { 
+    color: var(--text-main); 
+    font-family: 'Linux Libertine', 'Georgia', serif; 
+    margin-bottom: 0.8em; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.6rem; margin-top: 1.5rem; }
+
+a { color: var(--wiki-blue); text-decoration: none; transition: all 0.2s ease; }
+a:hover { text-decoration: underline; }
+a.wiki-kirmizi { color: var(--wiki-red) !important; }
+
+/* =========================================================================
+   3. ULTRA MODERN GLASSMORPHIC HEADER (PÃœRÃœZSÃœZ & AKICI)
+   ========================================================================= */
+.site-header {
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px -5px rgba(15, 23, 42, 0.04);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    gap: 20px;
+}
+
+/* MARKA LOGO VE BADGE */
+.header-branding-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+}
+
+.brand-badge {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.35);
+}
+
+.brand-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.site-slogan-badge {
+    font-size: 11px;
+    color: var(--text-muted);
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* MODERN CANLI ARAMA Ã‡UBUÄU */
+.header-search-wrapper {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #f8fafc;
+    border: 1.5px solid var(--border-color);
+    border-radius: 30px;
+    padding: 2px 14px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-search-form:focus-within {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.search-input-icon {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    margin-right: 8px;
+}
+
+.header-search-form input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 13.5px;
+    font-family: inherit;
+    color: var(--text-main);
+    outline: none;
+}
+
+.header-search-form input::placeholder {
+    color: #94a3b8;
+}
+
+.search-kbd-badge {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.search-kbd-badge kbd {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-family: inherit;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* YÃœZEN CANLI ARAMA SONUÃ‡LARI */
+.floating-search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--floating-shadow);
+    display: none;
+    z-index: 1050;
+    overflow: hidden;
+    animation: fadeInSlide 0.2s ease;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wiki-ajax-sonuclar { list-style: none !important; padding: 6px !important; margin: 0 !important; }
+.wiki-ajax-sonuclar li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-main);
+    text-decoration: none !important;
+    transition: background 0.15s ease;
+}
+
+.wiki-ajax-sonuclar li a:hover {
+    background: #f0f7ff;
+    color: var(--primary-color);
+}
+
+.wiki-ajax-yok {
+    padding: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* NAVÄ°GASYON VE BUTONLAR */
+.header-actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ust-ana-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.ust-ana-menu li a {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.ust-ana-menu li a:hover {
+    color: var(--primary-color);
+    background: #f1f5f9;
+}
+
+.header-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* MADDE YAZ CTA BUTONU */
+.btn-create-entry {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-gradient);
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 24px;
+    text-decoration: none !important;
+    box-shadow: 0 3px 12px rgba(37, 99, 235, 0.28);
+    transition: all 0.25s ease;
+}
+
+.btn-create-entry:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.38);
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+}
+
+.header-auth-btn {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 15px;
+    border-radius: 24px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.header-auth-btn.auth-login {
+    background: #f1f5f9;
+    color: #334155 !important;
+    border: 1px solid #cbd5e1;
+}
+
+.header-auth-btn.auth-login:hover {
+    background: #e2e8f0;
+    color: #0f172a !important;
+}
+
+.header-auth-btn.auth-logout {
+    background: #fef2f2;
+    color: #dc2626 !important;
+    border: 1px solid #fecaca;
+}
+
+.header-auth-btn.auth-logout:hover {
+    background: #fee2e2;
+}
+
+/* =========================================================================
+   5. ANA YERLEÅÄ°M (CARD SÄ°STEMÄ°)
+   ========================================================================= */
+.main-container {
+    max-width: 1280px;
+    margin: 24px auto;
+    display: flex;
+	position: relative; /* AyraÃ§larÄ±n dÄ±ÅŸarÄ± taÅŸmasÄ± iÃ§in ÅŸart */
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    min-height: 80vh;
+	overflow: visible !important; /* DÄ±ÅŸarÄ± taÅŸan butonlarÄ±n kesilmemesi iÃ§in bu ÅŸarttÄ±r */
+/*	    overflow: hidden; */
+
+}
+
+.site-main {
+    flex: 1;
+    padding: 40px;
+    min-width: 0;
+}
+
+.site-sidebar {
+    flex: 0 0 310px;
+    background: #f8fafc;
+    border-left: 1px solid var(--border-color);
+    padding: 35px 25px;
+}
+
+/* WIKI BÄ°LEÅENLERÄ° */
+.wiki-dinamik-menu { list-style: none !important; padding: 0 !important; }
+.wiki-dinamik-menu li { margin-bottom: 12px; font-size: 14px; }
+
+/* TARTIÅMA PANOSU (COMMENTS) Ã–ZEL TASARIMI */
+.wiki-comments-area {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.tartisma-baslik {
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--bg-gray);
+    padding-bottom: 15px;
+}
+
+.tartisma-baslik h2 {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+.tartisma-aciklama {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.wiki-comment-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin-bottom: 30px;
+}
+
+.wiki-comment-list .comment {
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.wiki-comment-list .comment:hover {
+    background: #fff;
+    border-color: var(--primary-color);
+}
+
+.comment-author vcard img {
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.comment-author .fn {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.comment-metadata a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-left: 10px;
+}
+
+.wiki-comment-list .children {
+    list-style: none !important;
+    margin-left: 40px;
+    border-left: 3px solid var(--border-color);
+    padding-left: 20px;
+}
+
+#respond {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 30px;
+}
+
+#reply-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.comment-form-comment label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.comment-form-comment textarea {
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    min-height: 120px;
+}
+
+.comment-form-comment textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background: #fff;
+}
+
+.wiki-submit-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.wiki-submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* masaÃ¼stÃ¼ sÃ¼rÃ¼mde mobil menu gizleme */
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    .sidebar-mobile-header {
+        display: none !important;
+    }
+
+/* =========================================================================
+   8. MODERN & ESTETÄ°K SAYFALAMA (PAGINATION) TASARIMI
+   ========================================================================= */
+.wiki-sayfalama-alani,
+.wiki-sayfalama,
+.navigation.pagination,
+.comment-navigation {
+    margin: 40px 0 20px 0;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    clear: both;
+}
+
+/* Ekran okuyucu baÅŸlÄ±ÄŸÄ±nÄ± gizle */
+.navigation.pagination .screen-reader-text,
+.wiki-sayfalama-alani .screen-reader-text {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    word-wrap: normal !important;
+}
+
+/* Sayfalama DÄ±ÅŸ KapsayÄ±cÄ± (Hap KartÄ±) */
+.nav-links,
+.comment-navigation .nav-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.navigation.pagination .nav-links {
+    background: #ffffff;
+    padding: 6px 10px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.05);
+}
+
+/* Sayfa ButonlarÄ± Temel Stili */
+.page-numbers,
+.nav-links a,
+.nav-links span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    color: var(--text-main, #334155);
+    background: #f8fafc;
+    border: 1.5px solid transparent;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    line-height: 1;
+}
+
+/* Ãœzerine GelindiÄŸinde (Hover) */
+a.page-numbers:hover,
+.nav-links a:hover {
+    background: #ffffff;
+    color: var(--primary-color, #2563eb) !important;
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Aktif (GeÃ§erli) Sayfa */
+.page-numbers.current,
+.nav-links span.current {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    transform: scale(1.04);
+}
+
+/* Ã–nceki ve Sonraki ButonlarÄ± */
+.page-numbers.prev,
+.page-numbers.next {
+    background: #ffffff;
+    border: 1.5px solid var(--border-color, #e2e8f0);
+    color: #1e293b;
+    padding: 0 18px;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.page-numbers.prev:hover,
+.page-numbers.next:hover {
+    background: var(--primary-color, #2563eb);
+    color: #ffffff !important;
+    border-color: var(--primary-color, #2563eb);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+/* ÃœÃ§ Nokta (...) AyracÄ± */
+.page-numbers.dots {
+    background: transparent !important;
+    border: none !important;
+    color: #94a3b8 !important;
+    min-width: 24px;
+    padding: 0 6px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: none !important;
+    transform: none !important;
+    cursor: default;
+}
+
+/* Mobil Cihazlar iÃ§in Kompakt Boyut */
+@media screen and (max-width: 600px) {
+    .navigation.pagination .nav-links {
+        border-radius: 20px;
+        padding: 4px;
+        gap: 4px;
+    }
+    
+    .page-numbers,
+    .nav-links a,
+    .nav-links span {
+        min-width: 34px;
+        height: 34px;
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .page-numbers.prev,
+    .page-numbers.next {
+        padding: 0 10px;
+    }
+}
+
+/* =========================================================================
+   9. saÄŸ kenar sayfa araÃ§larÄ± madde tartÄ±ÅŸma geÃ§iÅŸ alanÄ±
+   ========================================================================= */
+/* SaÄŸ Kenar Sayfa AyraÃ§larÄ± */
+.wiki-floating-rail {
+    position: absolute;
+    right: -46px; /* KonteynÄ±rÄ±n saÄŸ sÄ±nÄ±rÄ±nÄ±n dÄ±ÅŸÄ±na taÅŸÄ±r */
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 999;
+}
+.wiki-rail-btn {
+    width: 40px;
+    height: 120px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    border-left: none; /* Sayfaya yapÄ±ÅŸÄ±k gÃ¶rÃ¼nmesi iÃ§in */
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 10px 0;
+}
+/* data-label iÃ§indeki metni dikey olarak ikonun altÄ±na ekler */
+.wiki-rail-btn::after {
+    content: attr(data-label);
+    writing-mode: vertical-rl;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3366cc;
+    margin-top: 8px;
+}
+.wiki-rail-btn.aktif {
+    background: #fff;
+    width: 46px; /* Aktif olan ayraÃ§ biraz daha dÄ±ÅŸa taÅŸar */
+    border-right: 3px solid #3366cc; /* Kurumsal mavi vurgu [cite: 30] */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.wiki-rail-btn:hover { background: #eaf3ff; }
+@media screen and (max-width: 1000px) {
+    .wiki-floating-rail {
+        position: static; /* SaÄŸdaki sabit konumdan Ã§Ä±karÄ±r */
+        flex-direction: row; /* ButonlarÄ± yan yana dizer */
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        gap: 2px;
+    }
+
+    .wiki-rail-btn {
+        width: auto; /* Dikey geniÅŸliÄŸi iptal eder */
+        height: 40px; /* Standart buton yÃ¼ksekliÄŸi */
+        padding: 0 15px;
+        border: 1px solid #a2a9b1;
+        border-bottom: none; /* Sekme gibi gÃ¶rÃ¼nmesi iÃ§in */
+        border-radius: 4px 4px 0 0;
+        flex-direction: row; /* Ä°kon ve yazÄ±yÄ± yan yana getirir */
+    }
+
+    .wiki-rail-btn::after {
+        writing-mode: horizontal-tb; /* YazÄ±yÄ± tekrar yatay yapar */
+        margin-top: 0;
+        margin-left: 8px;
+    }
+    
+    .wiki-rail-btn.aktif {
+        width: auto; /* GeniÅŸleme efektini mobilde kapatÄ±r */
+        border-bottom: 2px solid #fff; /* Alttaki Ã§izgiyle birleÅŸme efekti */
+        margin-bottom: -1px;
+    }
+}
+
+
+/* =========================================================================
+   7. MOBÄ°L UYUMLULUK & DÄ°NAMÄ°K HEADER DÃœZENÄ°
+   ========================================================================= */
+@media screen and (max-width: 960px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .header-branding-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        background: #f0f7ff;
+        color: var(--primary-color);
+        border: 1px solid #cce0ff;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .site-slogan-badge {
+        display: none; /* Mobilde yer kazanmak iÃ§in slogan rozetini gizle */
+    }
+
+    .header-search-wrapper {
+        width: 100%;
+        max-width: 100%;
+        order: 3;
+    }
+
+    .search-kbd-badge {
+        display: none; /* Mobilde klavye kÄ±sayolunu gizle */
+    }
+
+    .header-actions-wrapper {
+        width: 100%;
+        justify-content: space-between;
+        order: 2;
+        padding-top: 4px;
+        border-top: 1px dashed var(--border-color);
+    }
+
+    .ust-ana-menu { display: none !important; }
+
+    .header-user-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-create-entry {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .header-auth-btn {
+        padding: 7px 18px;
+    }
+
+    .mobile-menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(4px);
+        z-index: 1040;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sidebar-mobile-header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        font-weight: 800;
+        color: var(--primary-color);
+    }
+
+    .sidebar-close-btn {
+        background: #f1f5f9;
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-main);
+    }
+
+    .site-sidebar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 290px !important;
+        max-width: 85vw;
+        height: 100vh !important;
+        background: #ffffff !important;
+        z-index: 1050 !important;
+        padding: 24px !important;
+        box-shadow: 4px 0 25px rgba(0,0,0,0.15);
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-right: 1px solid var(--border-color);
+        border-left: none;
+    }
+
+    .site-sidebar.active {
+        transform: translateX(0) !important;
+    }
+
+    .main-container {
+        display: block;
+        margin: 12px 0 0 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .site-main {
+        width: 100%;
+        padding: 20px 16px;
+    }
+}
+
+/* =========================================================================
+   10. KATEGORÄ° & ETÄ°KET ALFABETÄ°K HARF GRUPLARI
+   ========================================================================= */
+.wiki-archive-alphabetical {
+    margin-top: 20px;
+}
+
+.wiki-harf-grubu {
+    margin-bottom: 30px;
+    background: #ffffff;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.wiki-harf-baslik {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-color, #2563eb);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wiki-harf-baslik::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #f1f5f9;
+}
+
+/* =========================================================================
+   11. MADDE SAYFASI HIZLI DÃœZENLE BUTONLARI & MODAL
+   ========================================================================= */
+.wiki-entry-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.wiki-btn-quick-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+}
+
+.wiki-btn-quick-edit:hover {
+    background: #2563eb;
+    color: #ffffff !important;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Quick Edit Modal Dialog (Wikipedia Stili) */
+.wiki-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.wiki-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wiki-modal-dialog {
+    background: #ffffff;
+    width: 100%;
+    max-width: 960px;
+    max-height: 92vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    transform: translateY(15px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wiki-modal-overlay.active .wiki-modal-dialog {
+    transform: translateY(0);
+}
+
+/* Modal BaÅŸlÄ±k */
+.wiki-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.wiki-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wiki-modal-title h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.wiki-modal-title .madde-adi {
+    color: #2563eb;
+}
+
+.wiki-modal-close {
+    background: #e2e8f0;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    transition: all 0.2s;
+}
+
+.wiki-modal-close:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Modal GÃ¶vde */
+.wiki-modal-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* GÃ¶rsel WordPress / TinyMCE EditÃ¶r KapsayÄ±cÄ±sÄ± */
+.wiki-editor-container-wrapper {
+    width: 100%;
+}
+
+.wiki-editor-container-wrapper .wp-editor-wrap {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.wiki-editor-container-wrapper .mce-tinymce {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.wiki-editor-container-wrapper .mce-top-part {
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.wiki-editor-container-wrapper .mce-toolbar-grp {
+    background: #f8fafc !important;
+    padding: 6px 8px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.wiki-editor-container-wrapper .mce-toolbar .mce-btn-group {
+    padding: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+.wiki-editor-container-wrapper .mce-btn {
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    border-radius: 6px !important;
+    margin: 2px 1px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.15s ease !important;
+}
+
+.wiki-editor-container-wrapper .mce-btn:hover,
+.wiki-editor-container-wrapper .mce-btn.mce-active {
+    background: #eff6ff !important;
+    border-color: #93c5fd !important;
+    color: #2563eb !important;
+}
+
+.wiki-editor-container-wrapper .mce-btn button {
+    padding: 4px 8px !important;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    height: auto !important;
+    line-height: normal !important;
+}
+
+.wiki-editor-container-wrapper .mce-btn:hover button,
+.wiki-editor-container-wrapper .mce-btn.mce-active button {
+    color: #1d4ed8 !important;
+}
+
+.wiki-editor-container-wrapper textarea.wp-editor-area {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* DeÄŸiÅŸiklik Ã–zeti */
+.wiki-edit-summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.wiki-edit-summary-wrapper label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.wiki-summary-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13.5px;
+    box-sizing: border-box;
+}
+
+.wiki-summary-input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* CanlÄ± Ã–nizleme Kutusu */
+.wiki-quick-preview-container {
+    background: #fafafa;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 10px;
+}
+
+.preview-header-bar {
+    font-weight: 700;
+    font-size: 13.5px;
+    color: #1e293b;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-content-body {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Bildirim KutularÄ± */
+.wiki-alert-box {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.wiki-alert-success {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.wiki-alert-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Modal Alt Butonlar */
+.wiki-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wiki-btn-secondary {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.wiki-btn-secondary:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.wiki-btn-admin-link {
+    font-size: 12.5px;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.wiki-btn-admin-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.wiki-btn-cancel {
+    background: transparent;
+    color: #64748b;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.wiki-btn-cancel:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.wiki-btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff !important;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s;
+}
+
+.wiki-btn-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+.wiki-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Mobil Modal Uyumluluk */
+@media screen and (max-width: 768px) {
+    .wiki-modal-overlay {
+        padding: 10px;
+    }
+    
+    .wiki-modal-dialog {
+        max-height: 96vh;
+    }
+    
+    .wiki-modal-header,
+    .wiki-modal-body,
+    .wiki-modal-footer {
+        padding: 12px 16px;
+    }
+    
+    .wiki-modal-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .wiki-btn-primary {
+        flex: 1;
+    }
+}
+
+/* 8. YAZDIRMA TASARIMI */
+@media print {
+    .site-header, .site-sidebar, .wiki-floating-rail, .wiki-madde-araclari, .wiki-kategoriler,  
+    .site-footer, #wiki-canli-arama-kutusu, .mobile-menu-toggle, .mobile-menu-overlay, .wiki-ilgili-maddeler-modern,
+    .wiki-btn-quick-edit, .wiki-modal-overlay, .wiki-paylas-kutusu, #tartisma-icerigi, .wiki-madde-alti, .wiki-veri-arac-cubugu { 
+        display: none !important; 
+    }
+    
+    .wiki-print-footer-fixed { 
+        display: block !important; 
+        position: fixed; 
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        font-size: 9pt; 
+        color: #555; 
+        background: #fff;
+        border-top: 1px solid #ccc; 
+        padding: 8px 10px; 
+        text-align: left;
+        z-index: 9999;
+    }
+    
+    .main-container { display: block; border: none; margin: 0; padding: 0; }
+    .site-main { width: 100%; border: none; padding: 0; }
+    
+    body { background: #fff; color: #000; font-size: 12pt; padding-bottom: 50px; }
+    .entry-title { font-size: 24pt; border-bottom: 2px solid #000; }
+    a { text-decoration: none; color: #000; }
+}
+
+/* =========================================================================
+   9. HEADER KULLANICI PROFÄ°L BUTONU
+   ========================================================================= */
+.header-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 6px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 50px;
+    text-decoration: none !important;
+    color: #1e293b;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.header-profile-link:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+    color: #2563eb;
+}
+
+.profile-avatar-thumb img {
+    border-radius: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.profile-username {
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================================
+   10. KULLANICI PROFÄ°L SAYFASI (AUTHOR.PHP) TASARIMI
+   ========================================================================= */
+.wiki-profil-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Profil Ãœst Kart */
+.wiki-profil-kart {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.profil-sol-alan {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.profil-avatar-cerceve img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: block;
+    object-fit: cover;
+}
+
+.profil-kimlik-bilgi {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profil-isim-satir {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profil-gorunen-isim {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.profil-rol-rozet {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.rol-yonetici { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+.rol-editor   { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+.rol-yazar    { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+.rol-katkici  { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+.rol-uye      { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+
+.profil-meta-satir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #64748b;
+    flex-wrap: wrap;
+}
+
+.profil-kullanici-adi { font-weight: 600; color: #2563eb; }
+.meta-nokta { color: #cbd5e1; }
+.profil-web a { color: #2563eb; text-decoration: none; }
+.profil-web a:hover { text-decoration: underline; }
+
+.profil-biyografi {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.profil-biyografi p { margin: 0; }
+.profil-biyografi-bos { font-size: 13.5px; color: #94a3b8; margin-top: 4px; }
+
+/* Ä°statistik KutularÄ± */
+.profil-istatistik-kutulari {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.stat-kutu {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-kutu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+.stat-sayi {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.stat-etiket {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* Profil Sekme BarÄ± */
+.wiki-profil-sekme-bar {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 2px;
+    overflow-x: auto;
+}
+
+.wiki-profil-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    border-radius: 8px 8px 0 0;
+    white-space: nowrap;
+}
+
+.wiki-profil-tab-btn:hover {
+    color: #2563eb;
+    background: #f1f5f9;
+}
+
+.wiki-profil-tab-btn.aktif {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    background: #eff6ff;
+    font-weight: 700;
+}
+
+.wiki-profil-tab-btn.tab-btn-ayar {
+    margin-left: auto;
+}
+
+/* Sekme Ä°Ã§erikleri */
+.wiki-profil-tab-pane {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.pane-baslik-kutusu {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pane-baslik-kutusu h3 {
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.pane-baslik-kutusu p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #64748b;
+}
+
+/* KatkÄ± Tablosu */
+.wiki-katki-tablo-wrapper {
+    overflow-x: auto;
+}
+
+.wiki-katki-tablosu {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.wiki-katki-tablosu th {
+    background: #f8fafc;
+    color: #334155;
+    padding: 10px 14px;
+    border-bottom: 2px solid #e2e8f0;
+    text-align: left;
+    font-weight: 700;
+}
+
+.wiki-katki-tablosu td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.wiki-katki-tablosu tr:hover td {
+    background: #f8fafc;
+}
+
+.td-tarih { color: #64748b; font-size: 12.5px; white-space: nowrap; }
+.td-madde a { color: #0284c7; text-decoration: none; font-weight: 700; }
+.td-madde a:hover { text-decoration: underline; color: #0369a1; }
+.katki-islem-rozet {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.td-ozet em { color: #475569; }
+.wiki-mini-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+.wiki-mini-link:hover { text-decoration: underline; }
+
+/* Yazar Maddeleri Grid */
+.wiki-yazar-madde-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.wiki-yazar-madde-karti {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.wiki-yazar-madde-karti:hover {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+    background: #ffffff;
+}
+
+.wiki-yazar-madde-karti h4 {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 1.1rem;
+}
+
+.wiki-yazar-madde-karti h4 a { color: #0284c7; text-decoration: none; }
+.wiki-yazar-madde-karti h4 a:hover { text-decoration: underline; color: #0369a1; }
+
+.madde-ozet { font-size: 13px; color: #64748b; line-height: 1.5; flex: 1; }
+.madde-kart-alt {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94a3b8;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 8px;
+    margin-top: 4px;
+}
+
+/* TartÄ±ÅŸma Yorum KartlarÄ± */
+.wiki-profil-yorum-listesi {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wiki-profil-yorum-karti {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.yorum-kart-ust {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: #334155;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.yorum-madde-baslik a { color: #2563eb; text-decoration: none; }
+.yorum-madde-baslik a:hover { text-decoration: underline; }
+.yorum-tarih { font-size: 12px; color: #64748b; }
+.yorum-kart-metin {
+    background: #ffffff;
+    border-left: 3px solid #cbd5e1;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 13.5px;
+    color: #334155;
+}
+.yorum-kart-metin p { margin: 0; }
+
+/* Profil DÃ¼zenleme Formu */
+.wiki-profil-duzenle-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+}
+
+.form-satir {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-satir label { font-size: 13.5px; color: #334155; }
+.wiki-form-input,
+.wiki-form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.wiki-form-input:focus,
+.wiki-form-textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.wiki-bos-liste-mesaji {
+    padding: 30px;
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+/* =========================================================================
+   11. SAYFA GEÃ‡MÄ°ÅÄ° (/GECMÄ°S) ZAMAN Ã‡Ä°ZELGESÄ° (TIMELINE)
+   ========================================================================= */
+.wiki-gecmis-panel-wrapper {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.05);
+}
+
+.wiki-gecmis-ust-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.wiki-gecmis-don-btn {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.wiki-gecmis-don-btn:hover { text-decoration: underline; }
+
+.wiki-gecmis-toplam-rozet {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #e2e8f0;
+}
+
+.wiki-gecmis-baslik-alani {
+    margin-bottom: 24px;
+}
+
+.wiki-gecmis-baslik-alani h2 {
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.wiki-gecmis-aciklama {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.wiki-gecmis-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wiki-gecmis-kayit-karti {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    transition: all 0.2s;
+}
+
+.wiki-gecmis-kayit-karti:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.kayit-sol-tarih {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    min-width: 170px;
+}
+
+.kayit-orta-kullanici {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 220px;
+}
+
+.katkici-profil-linki {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13.5px;
+}
+
+.katkici-profil-linki img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.katkici-profil-linki:hover { color: #2563eb; text-decoration: underline; }
+
+.islem-turu-rozet {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 50px;
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.kayit-sag-ozet {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    color: #334155;
+}
+
+.ozet-etiket { color: #94a3b8; font-size: 12px; }
+.ozet-metin { font-style: italic; color: #475569; }
+
+/* Mobil Profil & GeÃ§miÅŸ UyumluluÄŸu */
+@media screen and (max-width: 768px) {
+    .wiki-profil-kart {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+    }
+    
+    .profil-sol-alan {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profil-isim-satir,
+    .profil-meta-satir {
+        justify-content: center;
+    }
+    
+    .profil-istatistik-kutulari {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .stat-kutu {
+        flex: 1;
+        padding: 10px 6px;
+        min-width: 0;
+    }
+    
+    .wiki-gecmis-kayit-karti {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* =========================================================================
+   14. MODERN ANSÄ°KLOPEDÄ° ANA SAYFA PORTAL TASARIMI
+   ========================================================================= */
+
+.wiki-portal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* 1. Hero KarÅŸÄ±lama AlanÄ± */
+.wiki-portal-hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 16px;
+    padding: 36px 32px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.wiki-portal-hero::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #fed7aa;
+    margin-bottom: 16px;
+}
+
+.hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f97316;
+    box-shadow: 0 0 8px #f97316;
+}
+
+.hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 2.1rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    letter-spacing: -0.5px;
+}
+
+.hero-description {
+    font-size: 15.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* SayaÃ§lar */
+.wiki-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.hero-stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 10px 18px;
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+}
+
+.hero-stat-card .stat-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    font-feature-settings: "tnum";
+}
+
+.hero-stat-card .stat-label {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+/* Butonlar */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 44px;
+}
+
+.btn-hero-primary {
+    background: #f97316;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
+}
+
+.btn-hero-primary:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.5);
+}
+
+.btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-hero-ghost {
+    background: transparent;
+    color: #e2e8f0 !important;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 2. GÃ¼nÃ¼n Maddesi */
+.wiki-gunun-maddesi-bolumu {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+}
+
+.gunun-maddesi-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.gunun-rozet {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #b45309;
+    background: #fef3c7;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.okuma-suresi {
+    font-size: 12.5px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.gunun-maddesi-kart {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.gunun-gorsel-alani {
+    flex: 0 0 220px;
+    max-width: 220px;
+}
+
+.gunun-gorsel-alani img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.gunun-gorsel-alani a:hover img {
+    transform: scale(1.03);
+}
+
+.gunun-metin-alani {
+    flex: 1;
+}
+
+.gunun-baslik {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 1.5rem !important;
+    margin: 0 0 8px 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.gunun-baslik a {
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.gunun-baslik a:hover {
+    color: #2563eb;
+}
+
+.gunun-ozet {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.btn-devamini-oku {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.btn-devamini-oku:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* 3. Tematik Portallar */
+.wiki-tematik-portallar {
+    margin-top: 4px;
+}
+
+.bolum-baslik-alani {
+    margin-bottom: 18px;
+}
+
+.bolum-basligi {
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin-bottom: 4px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.bolum-aciklama {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.tematik-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.tematik-kart {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.tematik-kart:hover {
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.12);
+}
+
+.kart-ikon-kutusu {
+    font-size: 26px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kart-icerik h3 {
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 4px 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.tematik-kart:hover .kart-icerik h3 {
+    color: #2563eb !important;
+}
+
+.kart-icerik p {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* 4. Ä°kili Ana Kolon Grid */
+.wiki-ana-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 6px;
+}
+
+.ana-kolon {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: var(--card-shadow);
+}
+
+.kolon-baslik-satir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.kolon-baslik-sol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kolon-ikon {
+    font-size: 18px;
+}
+
+.kolon-baslik {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.kolon-link-tumu {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.kolon-aciklama {
+    font-size: 12.5px;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.wiki-liste-modern {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wiki-liste-ogesi {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.wiki-liste-ogesi:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.madde-bilgi-satiri {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.madde-baslik-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.madde-baslik-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.madde-zaman {
+    font-size: 11.5px;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.madde-alt-bilgi {
+    margin-top: 3px;
+    font-size: 11.5px;
+    color: #64748b;
+}
+
+/* Eksik Maddeler KÄ±rmÄ±zÄ± Liste */
+.eksik-madde-ogesi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.eksik-madde-sol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.wiki-kirmizi-baslik {
+    color: #dc2626 !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wiki-kirmizi-baslik:hover {
+    text-decoration: underline;
+}
+
+.atif-sayisi-badge {
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 12px;
+}
+
+.btn-madde-baslat {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-madde-baslat:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+
+.wiki-bos-durum {
+    padding: 14px 0;
+    font-size: 13.5px;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* 5. KatkÄ± CTA Kutusu */
+.wiki-katki-cta-alani {
+    margin-top: 8px;
+}
+
+.cta-kutu {
+    background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+    border: 1.5px solid #bfdbfe;
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-ikon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.cta-metin {
+    flex: 1;
+}
+
+.cta-metin h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #1e3a8a !important;
+    margin: 0 0 6px 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.cta-metin p {
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.btn-cta-katil {
+    background: #2563eb;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-cta-katil:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================================================================
+   15. GELÄ°ÅMÄ°Å MOBÄ°L VE PERFORMANS DUYARLILIKLARI (RESPONSIVE)
+   ========================================================================= */
+
+@media screen and (max-width: 1024px) {
+    .tematik-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wiki-portal-hero {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem !important;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    .wiki-hero-stats {
+        gap: 10px;
+    }
+    
+    .hero-stat-card {
+        flex: 1;
+        min-width: 90px;
+        padding: 8px 12px;
+    }
+    
+    .hero-stat-card .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-hero {
+        justify-content: center;
+    }
+    
+    .gunun-maddesi-kart {
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .gunun-gorsel-alani {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .gunun-gorsel-alani img {
+        height: 180px;
+    }
+    
+    .tematik-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wiki-ana-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .cta-kutu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px;
+    }
+    
+    .cta-buton-alani {
+        width: 100%;
+    }
+    
+    .btn-cta-katil {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Dokunma Hedefleri (Touch Targets) ve Tablo TaÅŸma KorumasÄ± */
+@media (pointer: coarse) {
+    .btn-hero,
+    .btn-cta-katil,
+    .btn-create-entry,
+    .header-auth-btn {
+        min-height: 44px;
+    }
+}
+
+.entry-content table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* =========================================================================
+   19. YENİ ÖZELLİKLER (DARK MODE, LIGHTBOX, MOBİL ALT MENÜ)
+   ========================================================================= */
+
+/* --- MOBİL ALT MENÜ --- */
+.mobile-bottom-nav {
+    display: none; /* Sadece mobilde */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 9999;
+    border-top: 1px solid #e2e8f0;
+}
+.mobile-bottom-nav .nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    color: #475569;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s;
+}
+.mobile-bottom-nav .nav-item .icon { font-size: 18px; }
+.mobile-bottom-nav .nav-item .text { font-size: 11px; font-weight: 600; }
+.mobile-bottom-nav .nav-item:hover { color: #2563eb; }
+
+@media screen and (max-width: 768px) {
+    .mobile-bottom-nav { display: flex; }
+    body { padding-bottom: 60px; } /* Alt barın içeriğin üstüne binmesini engeller */
+}
+
+/* --- DARK MODE --- */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #cbd5e1;
+}
+body.dark-mode .site-header, 
+body.dark-mode .site-footer, 
+body.dark-mode .site-sidebar,
+body.dark-mode .wiki-madde-tam,
+body.dark-mode .wiki-navbox,
+body.dark-mode .wiki-arama-kapsayici,
+body.dark-mode .mobile-bottom-nav {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+body.dark-mode a { color: #60a5fa; }
+body.dark-mode a.wiki-kirmizi { color: #f87171; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: #f8fafc;
+    border-color: #334155;
+}
+body.dark-mode .wiki-ilgili-maddeler-modern .wiki-kart-modern {
+    background: #0f172a;
+    border-color: #334155;
+}
+body.dark-mode .wiki-ilgili-maddeler-modern .wiki-kart-modern h4 a { color: #60a5fa !important; }
+body.dark-mode .wiki-ilgili-maddeler-modern .wiki-kart-modern:hover { border-color: #60a5fa; }
+body.dark-mode .wiki-paylas-butonu { border-color: #334155; background: #1e293b; color: #cbd5e1; }
+body.dark-mode .navbox-header, body.dark-mode .navbox-content { background: #1e293b; color: #cbd5e1; border-color: #334155; }
+body.dark-mode .entry-content table th { background: #334155; color: #f8fafc; border-color: #475569; }
+body.dark-mode .entry-content table td { border-color: #334155; }
+
+/* Dark Mode Toggle Button */
+.wiki-dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: inherit;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+.wiki-dark-mode-toggle:hover { background: rgba(0,0,0,0.05); }
+body.dark-mode .wiki-dark-mode-toggle:hover { background: rgba(255,255,255,0.1); }
+
+/* --- LIGHTBOX --- */
+.wiki-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(5px);
+}
+.wiki-lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: wikiZoomIn 0.3s ease;
+}
+.wiki-lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.wiki-lightbox-close:hover,
+.wiki-lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes wikiZoomIn {
+    from {transform:scale(0.95); opacity:0;}
+    to {transform:scale(1); opacity:1;}
+}
+.entry-content img { cursor: zoom-in; }
+
+/* Kaynakca vurgulama animasyonu */
+@keyframes wikiRefFlash {
+    0%   { background: #fef9c3; box-shadow: 0 0 0 3px #facc15; }
+    70%  { background: #fef9c3; box-shadow: 0 0 0 3px #facc15; }
+    100% { background: transparent; box-shadow: none; }
+}
+.wiki-ref-highlight {
+    animation: wikiRefFlash 3s ease forwards;
+    border-radius: 3px;
+    scroll-margin-top: 80px;
+}
+
+/* Gizle / Goster yardimci sinifi */
+.wiki-hidden { display: none !important; }
+
+/* Share box (Sayfayi Paylas) */
+.wiki-share-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+.wiki-share-box-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-right: 6px;
+}
+.wiki-paylas-butonu {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    color: #334155;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.wiki-paylas-butonu:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    text-decoration: none;
+}
+.wiki-paylas-butonu.kopyalandi {
+    background: #dcfce7;
+    border-color: #4ade80;
+    color: #166534;
+}
+
+/* Sablon (Navbox) gorunum duzeltmesi */
+.navbox-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    font-weight: 600;
+}
+.navbox-header .toggle-icon {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-left: 8px;
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Duzenle / Panelden Gec buton stilleri */
+.wiki-madde-araclari a,
+.wiki-madde-araclari button {
+    transition: background 0.15s, color 0.15s;
+}
+.wiki-madde-araclari a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode: share box */
+body.dark-mode .wiki-share-box {
+    background: #1e293b;
+    border-color: #334155;
+}
+body.dark-mode .wiki-paylas-butonu {
+    background: #0f172a;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+    background: #1e293b;
+    border-color: #475569;
+}
+
+/* =========================================================================
+   SOSYAL MEDYA PAYLAS KUTUSU (wiki-paylas-kutusu + btn-paylas)
+   ========================================================================= */
+.wiki-paylas-kutusu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.paylas-sol-bilgi {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #475569;
+    margin-right: 4px;
+}
+
+.paylas-ana-ikon { font-size: 1.1rem; }
+.paylas-etiket  { white-space: nowrap; }
+
+.paylas-buton-grubu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-paylas {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.12s;
+    line-height: 1.4;
+}
+
+.btn-paylas:hover {
+    transform: translateY(-1px);
+    text-decoration: none !important;
+}
+
+.paylas-simge { font-size: 1rem; line-height: 1; }
+
+/* Renk varyantları */
+.btn-paylas-whatsapp  { border-color: #25d366; color: #128c7e; }
+.btn-paylas-whatsapp:hover  { background: #f0fdf4; color: #075e54; }
+
+.btn-paylas-x  { border-color: #000; color: #000; }
+.btn-paylas-x:hover  { background: #f9f9f9; }
+
+.btn-paylas-facebook  { border-color: #1877f2; color: #1877f2; }
+.btn-paylas-facebook:hover  { background: #eff6ff; }
+
+.btn-paylas-telegram  { border-color: #0088cc; color: #0088cc; }
+.btn-paylas-telegram:hover  { background: #f0f9ff; }
+
+.btn-paylas-kopyala  { border-color: #94a3b8; color: #475569; }
+.btn-paylas-kopyala:hover  { background: #f1f5f9; border-color: #64748b; }
+.btn-paylas-kopyala.kopyalandi  { background: #dcfce7; border-color: #4ade80; color: #166534; }
+
+@media (max-width: 600px) {
+    .wiki-paylas-kutusu { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .paylas-buton-grubu { gap: 6px; }
+    .btn-paylas { font-size: 0.8rem; padding: 6px 11px; }
+}
+
+/* Dark mode: paylas kutusu */
+body.dark-mode .wiki-paylas-kutusu {
+    background: #1e293b;
+    border-color: #334155;
+}
+body.dark-mode .btn-paylas {
+    background: #0f172a;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+body.dark-mode .btn-paylas:hover {
+    background: #1e293b;
+    border-color: #475569;
+}
+

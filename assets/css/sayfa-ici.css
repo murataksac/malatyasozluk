@@ -1,0 +1,612 @@
+/* ANA SAYFA ÖZEL TASARIMI */
+.wiki-ana-giris {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+.ana-baslik {
+    font-family: 'Linux Libertine', Georgia, serif; /* [cite: 26] */
+    background: #eaecf0;
+    padding: 8px 15px;
+    border: 1px solid #a2a9b1;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.wiki-gunun-maddesi .gunun-kart {
+    padding: 20px;
+    border: 1px solid #c8ccd1;
+    border-top: none;
+    margin-bottom: 25px;
+}
+.wiki-ana-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.wiki-liste-sade {
+    list-style: square;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+.kirmizi-liste a { color: #ba0000 !important; } /* [cite: 36] */
+@media (max-width: 768px) {
+    .wiki-ana-grid { grid-template-columns: 1fr; }
+}
+
+/* WIKI RAPOR PANELİ TASARIMI */
+.wiki-rapor-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.wiki-rapor-box {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.wiki-rapor-box h3 {
+    font-family: 'Linux Libertine', serif; /* [cite: 26] */
+    font-size: 1.3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.wiki-rapor-box ul {
+    list-style: none !important;
+    padding: 0;
+}
+
+.wiki-rapor-box li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+    font-size: 0.95rem;
+}
+
+.rapor-sayi {
+    float: right;
+    background: #f8f9fa;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.rapor-not {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+    .wiki-rapor-container { flex-direction: column; }
+}
+
+/* =========================================================================
+   ANLAM AYRIMI (DISAMBIGUATION) ŞABLONU
+   ========================================================================= */
+.wiki-anlam-ayrimi {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa; /* Hafif modern gri arka plan */
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #3366cc; /* Malatya Sözlük ana mavi rengi */
+    padding: 12px 20px;
+    margin: 10px 0 25px 0;
+    border-radius: 4px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+.anlam-ayrimi-ikon {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+.anlam-ayrimi-metin {
+    color: #202122;
+}
+.anlam-ayrimi-metin strong {
+    color: #000;
+}
+.anlam-ayrimi-metin a {
+    font-weight: bold;
+    color: #0645ad; /* Standart wiki mavisi */
+    text-decoration: none;
+}
+.anlam-ayrimi-metin a:hover {
+    text-decoration: underline;
+}
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+    .wiki-anlam-ayrimi {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+    .anlam-ayrimi-ikon {
+        margin-right: 10px;
+    }
+}
+
+/* =========================================================================
+   BİLGİ KUTUSU (INFOBOX) MODERN TASARIMI
+   ========================================================================= */
+.wiki-bilgi-kutusu {
+    float: right;
+    width: 275px;
+    margin: 0 0 20px 25px;
+    background: #ffffff;
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Köşelerin taşmasını önler */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    z-index: 10;
+}
+/* Bilgi Kutusu İçindeki Tablo Yapısı */
+.wiki-bilgi-kutusu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+/* Başlık Alanı (Tablonun en üstü) */
+.wiki-bilgi-kutusu th {
+    background-color: #f8f9fa;
+    color: var(--text-main, #1c1e21);
+    padding: 15px 10px;
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--primary-color, #3366cc);
+    text-align: center;
+}
+/* Görsel Alanı */
+.wiki-bilgi-kutusu td img, 
+.wiki-bilgi-kutusu .wp-post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+/* Satır ve Hücre Düzeni */
+.wiki-bilgi-kutusu tr {
+    border-bottom: 1px solid #f0f2f5;
+}
+.wiki-bilgi-kutusu tr:last-child {
+    border-bottom: none;
+}
+/* Etiket (Sol Sütun) */
+.wiki-bilgi-kutusu td:first-child {
+    background: #fcfcfc;
+    font-weight: 700;
+    width: 35%;
+    color: var(--text-muted, #65676b);
+    padding: 10px;
+    vertical-align: top;
+}
+/* Değer (Sağ Sütun) */
+.wiki-bilgi-kutusu td:last-child {
+    padding: 10px;
+    color: var(--text-main, #1c1e21);
+}
+/* İç Link Uyumu */
+.wiki-bilgi-kutusu a {
+    color: var(--wiki-blue, #0645ad);
+    text-decoration: none;
+}
+.wiki-bilgi-kutusu a:hover {
+    text-decoration: underline;
+}
+/* MOBİL UYUMLULUK */
+@media screen and (max-width: 768px) {
+    .wiki-bilgi-kutusu {
+        float: none;
+        width: 100%;
+        margin: 15px 0;
+        box-shadow: none;
+        border-radius: 8px;
+    }
+}
+/* =========================================================================
+   Sözlük Kutusu Özel Tasarımı
+   ========================================================================= */
+/* Sözlük Kutusu Özel Tasarımı */
+/* Sözlük Sayfası Tüm Arka Plan */
+.sozluk-sayfasi {
+    background-color: #fffaf0 !important; /* Kitap kağıdı rengi */
+    border-left: 8px solid #3366cc !important;
+    padding: 40px !important;
+}
+
+/* Başlık: Daha Büyük ve Fonetik */
+.sozluk-sayfasi .entry-title {
+    font-size: 3.5em !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #3366cc;
+    margin-bottom: 30px;
+}
+
+/* İçerik: Anlamlar ve Örnekler */
+.sozluk-sayfasi .entry-content {
+    font-family: 'Georgia', serif;
+    font-size: 1.25em;
+    line-height: 2;
+}
+
+/* Örnek Cümleler İçin Özel Stil */
+.sozluk-sayfasi blockquote, 
+.sozluk-sayfasi .ornek-cumle {
+    display: block;
+    margin: 20px 0;
+    padding: 15px 25px;
+    background: #f0f0f0;
+    border-radius: 0 15px 15px 0;
+    font-style: italic;
+    color: #444;
+}
+/* =========================================================================
+   SİDEBAR ETİKET BULUTU TASARIMI
+   ========================================================================= */
+/* SİDEBAR ETİKET BULUTU TASARIMI */
+.wiki-sidebar-tags-container {
+    margin-top: 20px;
+}
+.wiki-tag-cloud {
+    display: flex;
+    flex-wrap: wrap; /* Sığmayan etiketleri alt satıra atar */
+    gap: 8px; /* Etiketler arasındaki boşluk */
+    padding-top: 5px;
+}
+.wiki-tag-item {
+    display: inline-block;
+    background: #f0f2f5; /* Hafif gri arka plan */
+    color: #3366cc; /* Malatya Sözlük ana mavisi */
+    padding: 6px 12px;
+    border-radius: 20px; /* Yuvarlak köşeler */
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none !important;
+}
+.wiki-tag-item:hover {
+    background: #3366cc;
+    color: #ffffff;
+    border-color: #3366cc;
+    box-shadow: 0 4px 8px rgba(51, 102, 204, 0.2);
+    transform: translateY(-1px);
+}
+
+/* =========================================================================
+   MODERN KATEGORİ LİSTESİ TASARIMI
+   ========================================================================= */
+.wiki-kategoriler {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: #f8f9fa; /* Hafif gri modern arka plan */
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+/* "Kategoriler:" Yazısı */
+.wiki-kategoriler strong {
+    color: var(--text-muted, #65676b);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Kategori Linkleri (Pill Style) */
+.wiki-kategoriler a {
+    display: inline-block;
+    background: #ffffff;
+    color: var(--primary-color, #3366cc);
+    padding: 6px 14px;
+    border: 1px solid var(--primary-color, #3366cc);
+    border-radius: 50px; /* Tam yuvarlak hap görünümü */
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover Efekti */
+.wiki-kategoriler a:hover {
+    background-color: var(--primary-color, #3366cc);
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(51, 102, 204, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Kategoriler Arasındaki Gereksiz Düz Çizgileri (|) Gizle */
+/* (Eğer the_category(' | ') fonksiyonundan geliyorsa) */
+.wiki-kategoriler {
+    color: transparent; /* Ayraçları gizlemek için */
+}
+
+.wiki-kategoriler strong, 
+.wiki-kategoriler a {
+    color: initial; /* Sadece yazıları ve linkleri geri getirir */
+}
+
+/* MOBİL UYUMLULUK */
+@media screen and (max-width: 768px) {
+    .wiki-kategoriler {
+        padding: 12px;
+        justify-content: flex-start;
+    }
+    .wiki-kategoriler a {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+}
+
+/* =========================================================================
+   EKSİK MADDELER SAYFASI ÖZEL TASARIMI
+   ========================================================================= */
+
+.wiki-eksik-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color, #a2a9b1);
+}
+
+.page-description {
+    color: var(--text-muted, #54595d);
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* Grid Yapısı */
+.eksik-maddeler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Madde Kartı */
+.eksik-madde-kart {
+    background: #ffffff;
+    border: 1px solid var(--border-color, #e5e7eb);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.eksik-madde-kart:hover {
+    border-color: #ba0000; /* Wikipedia Kırmızısı [cite: 36] */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(186, 0, 0, 0.1);
+}
+
+/* Metin Alanları */
+.eksik-madde-bilgi {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.wiki-kirmizi-link {
+    color: #ba0000 !important; /* Standart Wikipedia Kırmızısı [cite: 26, 36] */
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.gecis-sayisi {
+    font-size: 0.8rem;
+    color: #666;
+    background: #f0f2f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Oluştur Butonu */
+.olustur-buton {
+    background: #f8f9fa;
+    color: #3366cc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s;
+}
+
+.olustur-buton:hover {
+    background: #3366cc;
+    color: #fff !important;
+    border-color: #3366cc;
+}
+
+/* Başarı Kutusu */
+.wiki-basari-kutusu {
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Mobil Düzen */
+@media (max-width: 600px) {
+    .eksik-maddeler-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ARŞİV VE KATEGORİ ÖZEL STİLLERİ */
+
+/* Breadcrumb (Ekmek Kırıntısı) */
+.wiki-breadcrumb {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+.wiki-breadcrumb a { color: #3366cc; }
+
+/* Başlık ve Açıklama [cite: 3, 26] */
+.archive-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 2rem;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.archive-description {
+    font-size: 1.05rem;
+    color: #54595d;
+    margin-bottom: 25px;
+}
+
+/* Alt Kategoriler Kutusu */
+.wiki-sub-categories {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+.wiki-sub-categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* Madde Grid Yapısı (Çift Sütun) */
+.wiki-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    list-style: square !important; /* Ansiklopedik kare imleri [cite: 3] */
+    padding-left: 20px;
+}
+.wiki-archive-grid li {
+    padding: 5px 0;
+    transition: transform 0.2s;
+}
+.wiki-archive-grid li:hover {
+    transform: translateX(5px);
+}
+
+/* Sayfalama [cite: 3] */
+.wiki-sayfalama-alani {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+/* ==================================================
+ * 
+ * ================================================== */
+
+/* =========================================================================
+   MADDE BİLGİSİ VE GÜNCELLEME TARİHİ TASARIMI
+   ========================================================================= */
+
+.wiki-madde-bilgi {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f2f5; /* Çok hafif üst sınır çizgisi */
+    color: #65676b; /* Muted (hafifletilmiş) metin rengi [1] */
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* "em" etiketini modern bir görünüme sokuyoruz */
+.wiki-madde-bilgi em {
+    font-style: normal; /* İtalik yerine daha modern düz stil */
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Başına ansiklopedik bir saat/bilgi ikonu ekleyelim (Emoji ile hızlı ve hafif) */
+.wiki-madde-bilgi::before {
+    content: '🕒';
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Kategorilerle uyumlu olması için footer düzeni */
+.wiki-madde-alti {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+/* Mobil cihazlarda metni ortalayalım */
+@media screen and (max-width: 768px) {
+    .wiki-madde-bilgi {
+        justify-content: flex-start;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* *************************************************************
+ *  madde altı araçlar
+ *
+ * ***************************************************************** */
+.wiki-madde-araclari {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #a2a9b1; /* Wikipedia tarzı ince ayraç [2] */
+    border-bottom: 1px dotted #e2e2e2;
+}
+
+.wiki-madde-araclari ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.wiki-madde-araclari li a {
+    font-size: 0.85rem;
+    color: #0645ad; /* Standart wiki mavisi [2] */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wiki-madde-araclari li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobilde linkler çok sıkışırsa dikey dizilsin */
+@media screen and (max-width: 600px) {
+    .wiki-madde-araclari ul { flex-direction: column; gap: 8px; }
+}
+/* ***********************************************
+ * ***********************************
+ * ********************************************************** */
